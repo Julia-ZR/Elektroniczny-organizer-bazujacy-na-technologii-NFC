@@ -42,7 +42,7 @@ System został zaprojektowany w oparciu o dwie współpracujące płytki STM32:
 
 <img width="739" height="258" alt="image" src="https://github.com/user-attachments/assets/26991d6f-f392-4b6b-bc62-5ad83e38935c" />
 
-* STM32F769I-DISCO
+* STM32F769I-DISCO (główna jednostka wykonawcza)
 * NUCLEO-L476RG
 * X-NUCLEO-NFC08A1
 * czytnik kart microSD Waveshare 3947
@@ -200,30 +200,81 @@ Automatyzacja procesów magazynowych pozwala ograniczyć błędy logistyczne i l
   * 40 szuflad.
 
 ---
+# Kompletny system
+<img width="618" height="482" alt="image" src="https://github.com/user-attachments/assets/3eaee02a-b487-4a9c-8c05-f39c86526a8a" />
 
-# Wykorzystane technologie
+Urządzenie z obudową
 
-* STM32
-* TouchGFX
-* FreeRTOS
-* FatFs
-* NFC
-* UART
-* SPI
-* SDMMC
-* microSD
-* C/C++
-* Embedded GUI
-* NDEF
-* ST25R3916
+<img width="484" height="482" alt="image" src="https://github.com/user-attachments/assets/4fc9a6af-0bdd-455f-9e3f-c88032e6d225" />
+
+Urządzenie bez obudowy
 
 ---
+# Obudowa
+Obudowa została wykonana w programie Fusion i składa się z dwóch części – pokrywy i obudowy. Do realizacji projektu wykorzystano następujące narzędzia 
+* wyciągania 
+* wycinania 
+* robienia otworu
+* zaokrąglenia narożników
+<img width="665" height="459" alt="image" src="https://github.com/user-attachments/assets/a3b8042a-1670-4799-a1c1-c956de48019d" />
 
+Wnętrze obudowy
+
+---
+# Algorytm pracy programu
+<img width="1387" height="424" alt="image" src="https://github.com/user-attachments/assets/90c96d44-ef8a-409d-ac5c-44c014a36bb1" />
+
+
+---
+# Badania testowe
+Wykonano następujące testy jednostkowe:
+* komunikacji z komputerem PC
+* komunikacji UART między dwoma płytkami
+* odczytu tagu NFC
+* odczytu z karty μSD
+* wyświetlacza (biblioteka TouchGFX)
+
+Testy dla każdego komponentu przebiegły pomyślnie.
+
+W ramach badań funkcjonalnych wykonano test działania systemu, który potwierdził poprawne działanie docelowego systemu.
+<img width="638" height="478" alt="image" src="https://github.com/user-attachments/assets/377fcf1b-f6fe-482f-8d92-ca0caf2b2cbd" />
+
+Działający docelowy system
+
+---
+# Badanie poboru prądu
+
+Badanie poboru prądu przeprowadzono za pomocą urządzenia Keweisi KWS-MX18L, które jest testerem USB z wyświetlaczem IPS. Na podstawie pomiarów sporządzono wykres poboru prądu w funkcji czasu.
+
+<img width="366" height="300" alt="image" src="https://github.com/user-attachments/assets/7289b7e2-55c1-486e-9231-ad814ae27df2" />
+
+Keweisi KWS-MX18L
+
+<img width="740" height="433" alt="image" src="https://github.com/user-attachments/assets/eed83ae5-3430-430f-b0bf-6a8b1ded2b86" />
+
+Wykres poboru prądu w funkcji czasu
+
+Ponadto oszacowano stopień teoretycznego wykorzystania akumulatora, który wynosił 49,44 % dla powerbanka o pojemności 20 000 mAh.
+
+---
 # Potencjalne zastosowania
-
 * magazyny,
 * centra logistyczne,
 * przedsiębiorstwa produkcyjne,
 * archiwizacja zasobów,
 * automatyzacja inwentaryzacji,
 * zarządzanie wyposażeniem i częściami.
+---
+# Podsumowanie
+Zaprojektowano i praktycznie wykonano elektroniczny organizer, w którym występuje obsługa:
+* NFC
+* TouchGFX
+* karty pamięci
+
+Zaprojektowano dedykowaną obudowę urządzenia oraz przetestowano urządzenie pod kątem testów jednostkowych, testów działania systemu i poboru prądu.
+
+Dalsze prace:
+* opracowanie projektu płytki PCB
+* automatyczne generowanie raportów
+* wykresy deficytów produktów
+
