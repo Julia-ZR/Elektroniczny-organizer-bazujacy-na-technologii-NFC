@@ -165,8 +165,6 @@ W projekcie wykorzystano kilka kluczowych bibliotek i frameworków:
 * **X-CUBE-NFC6** – pakiet bibliotek ST do obsługi czytnika NFC ST25R3916 oraz komunikacji z tagami NFC.
 * **HAL (Hardware Abstraction Layer)** – warstwa abstrakcji sprzętowej upraszczająca obsługę interfejsów UART, SPI, SDMMC i GPIO.
 
-Takie podejście pozwoliło stworzyć modularne i łatwe w rozbudowie oprogramowanie dla systemu embedded.
-
 ---
 
 # Funkcjonalności systemu
